@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sunshine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_ongda">Hello Ongda!</string>
+    <string name="weather_img">weather</string>
+    <string name="sample_high">32 F</string>
+    <string name="sample_low">19 F</string>
+</resources>

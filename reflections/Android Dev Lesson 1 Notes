@@ -1,0 +1,42 @@
+Android Development 
+Lesson 1 Reflections
+
+Process of Running an Android App 
+  1) Android Project
+  2) Gradle Build
+  3) APK (Application Package)
+     - Result of Gradle Build containing Byte Code, Resources, Manifest
+  4) Signature
+     - Needs a jar signature before pushing on device 
+  5) Install on Device 
+     - ADB (Android Debug Bridge) -- uses ADB to launch app by giving a start command 
+	 
+Running the App
+  - MainActivity.java is run at start of app. Fragment is the container on the view where 
+  you can insert items (list views, text, pictures, etc). To call other templates you need to add them 
+  to View (predetermined) using the following View rootview = inflater.inflate(R.layout, fragment_main);
+
+Different Types of Layouts: 
+  - Frame Layout - view broken up into 6 sections. Great for one item in view (lists)
+  - Relative Layout - very powerful but complicated, can move multiple objects around in the view
+  - Linear Layout - view organized in vertical or horizontal stack. Useful for placing objects proportionally to each other
+
+Creating a ListView 
+  - Android uses process of recycling each view that it scrolls off the screen allowing it to be reused
+  when you need to reshow another item. Creating step is used only once for each view. Saves a lot 
+  of memory overhead, smoother scrolling, etc. 
+  
+  - Populate a list view involves 3 steps --- Data -> ArrayAdapter -> ListView
+	1) Initialize adapter and pass 4 args in it (context, actual list, list item, data)
+	2) Assign instructions to data w/in ArrayAdapter
+	3) Connect ArrayAdapter to the listView for placing data onto LV
+		- must register List View by going down hierarchy of views -- use findViewbyId -- (R.id.listViewName)
+		- set adapter to that ListView (view.setAdapter(adapterName))
+		
+Notes: 
+  - Use lower android version or else rendering issues may occur. 
+  - Avoid using hard line text. Always assign variables and use them in XML following this format @"string/var_name"
+  All variables should be stored in strings.xml in values package. 
+  - To locate a view Id, must follow Hierarchy of Views
+  
+  
